@@ -1,0 +1,76 @@
+//Zad. 1
+            int suma, a, b;
+            a = int.Parse(Console.ReadLine());
+            b = int.Parse(Console.ReadLine());
+            suma = a + b;
+            if (suma % 2 == 0)
+                Console.WriteLine(suma + "suma jest parzysta");
+            else
+                Console.WriteLine(suma + "suma nie jest parzysta");
+            Console.ReadKey();
+//Zad. 2
+            double a, b, geom_mean, arit_mean;
+            a = double.Parse(Console.ReadLine());
+            b = double.Parse(Console.ReadLine());
+
+            arit_mean = (a + b) / 2;
+
+            double a1 = Math.Sqrt(a);
+            double b2 = Math.Sqrt(b);
+            geom_mean = a1 * b2;
+
+            if (arit_mean > geom_mean)
+                Console.WriteLine("WIĘKSZE");
+            else
+                Console.WriteLine("NIE WIĘKSZE");
+
+            Console.ReadKey();
+//Zad. 3
+            int a, b, c;
+            a = int.Parse(Console.ReadLine());
+            b = int.Parse(Console.ReadLine());
+            c = int.Parse(Console.ReadLine());
+
+            if (a == b || a == c || b == c)
+                Console.WriteLine("TAK");
+            else
+                Console.WriteLine("NIE");
+            Console.ReadKey();
+//Zad. 4
+            int [] tab = new int[4];
+            for (int i = 0; i < tab.Length; i++)
+            {
+                tab[i] = int.Parse(Console.ReadLine());
+            }
+
+            if (tab[0] == tab[1] || tab[0] == tab[2] || tab[0] == tab[3] || tab[1] == tab[2] || tab[1] == tab[3] || tab[2] == tab[3])
+            {
+                Console.WriteLine("liczby nie są różne");
+            }
+            else
+            {
+                int d = tab[0];
+                for (int i = 0; i < tab.Length; i++)
+                {
+                    if (d > tab[i])
+                    {
+                        d = tab[i];
+                    }
+                }
+                Console.WriteLine("Najmniejszą wczytaną liczbą jest {0}", d);
+            }
+            Console.ReadKey();
+//Zad. 5
+            int a, b, c;
+            a = int.Parse(Console.ReadLine());
+            b = int.Parse(Console.ReadLine());
+            c = int.Parse(Console.ReadLine());
+            if (a + b <= c || a + c <= b || b + c <= a)
+            {
+                Console.WriteLine("Nie");
+            }
+            else
+            {
+                Console.WriteLine("Tak");
+            }
+            Console.ReadKey();
